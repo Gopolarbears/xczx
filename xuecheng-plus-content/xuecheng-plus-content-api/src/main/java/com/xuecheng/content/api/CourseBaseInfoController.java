@@ -17,10 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2022/9/6 11:29
  * @version 1.0
  */
+
+@Api(value = "课程信息编辑接口",tags = "课程信息编辑接口")
 @RestController
 public class CourseBaseInfoController {
 
-    @RequestMapping("/course/list")
+    @ApiOperation("课程查询接口")
+    @PostMapping("/course/list")
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody(required = false) QueryCourseParamsDto queryCourseParams){
 
         return null;
